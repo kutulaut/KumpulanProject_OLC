@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Dicky Rahmanto A</title>
+    <link rel="stylesheet" href="Assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Awal Navbar -->
+    <section>
+      <nav class="navbar">
+        <div class="logo">
+          <h4>Port<span>folio.</span></h4>
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </section>
+    <!-- Akhir Navbar -->
+    <!-- Awal Home -->
+    <section id="home">
+      <div class="banner">
+        <div id="circle"><img src="Assets/img/diki.JPG" /></div>
+        <div class="title">
+          <h1 class="name">~Hi I'm Dicky Rahmanto</h1>
+          <p>And I'm a Programmer Junior</p>
+        </div>
+      </div>
+      <svg id="curve" viewBox="0 0 1400 214.953" xml:space="preserve">
+        <path
+          style="opacity: 1; fill: "
+          d="M0,139.29C207.803,40.048,277.683-60.968,472.864,45.364
+          c195.181,106.331,346.987,163.042,481.928,77.975c134.939-85.065,337.348-34.515,437.348,41.225c100,75.743,7.861,6.627,7.861,6.627
+          v73.387H0V139.29z"
+        />
+      </svg>
+    </section>
+    <!-- Akhir Home -->
+
+    <!-- Awal About Me -->
+    <section id="about-me">
+      <div class="container">
+        <h2>About Me</h2>
+        <table class="tabel1" border="1" cellspacing="2" cellpadding="10">
+          <tr>
+            <td>
+              <div class="am-kiri">
+                <img src="Assets/img/home.jpg" />
+              </div>
+            </td>
+            <td>
+              <div class="am-kanan">
+                <table class="tabel2" border="1" cellspacing="0" cellpadding="10">
+                  <tr>
+                    <th>Full Name :</th>
+                    <td>Dicky Rahmanto Ariffirmansyah</td>
+                  </tr>
+                  <tr>
+                    <th>Nickname :</th>
+                    <td>Diki, Dik, Kii, Saud, Suad, Saut</td>
+                  </tr>
+                  <tr>
+                    <th>Place and Date Of Birth :</th>
+                    <td>Sragen, 11 March 2002</td>
+                  </tr>
+                  <tr>
+                    <th>Religion :</th>
+                    <td>Islam</td>
+                  </tr>
+                  <tr>
+                    <th>Gender :</th>
+                    <td>Male</td>
+                  </tr>
+                  <tr>
+                    <th>Summary :</th>
+                    <td>
+                      hello, my name is dicky rahmanto ariffimansyah,
+                      <br />i was born in a simple family. <br />Thank God I can still be educated from elementary to high school <br />and now studying at one of the universities in Bandung, <br />namely Pasundan University with a major in
+                      informatics engineering. <br />
+                      I like the field of technology because its development is very rapid, <br />
+                      causing the whole world to need informatics engineering
+                      <br />graduates to adapt to the development of the era.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- Akhir About Me -->
+
+    <!-- Awal Project-->
+    <section id="project">
+      <h4>Project</h4>
+      <div class="pc">
+        <div class="card">
+          <div class="head-card">
+            <img src="Assets/img/projek3.png" alt="" />
+          </div>
+          <div class="body-card">
+            <h3>Membuat Website full stack</h3>
+            <div class="detail">
+              <a href="https://kaininid.000webhostapp.com/login.php" target="_blank">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head-card">
+            <img src="Assets/img/projek2.png" alt="" />
+          </div>
+          <div class="body-card">
+            <h3>Membuat Website Portfolio menggunakan Boostrap 5</h3>
+            <div class="detail">
+              <a href="https://bit.ly/TugasKelompokITW-D" target="_blank">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head-card">
+            <img src="Assets/img/projek1.png" alt="" />
+          </div>
+          <div class="body-card">
+            <h3>Membuat Website Portfolio menggunakan HTML & CSS</h3>
+            <div class="detail">
+              <a href="https://kutulaut.github.io/portfolio.github.io/" target="_blank">Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Project-->
+    <!-- Awal Contact -->
+    <section id="contact">
+      <div class="hubungi">
+        <h2>contact</h2>
+        <form name="submit-to-google-sheet" autocomplete="off">
+          <div class="alert" style="display: none"><strong>Terima Kasih!</strong>Pesan Anda Sudah Kami Terima</div>
+          <div class="info">
+            <input type="text" name="nama" placeholder="Nama Lengkap" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="text" name="nomorHp" placeholder="Nomor HP" required />
+          </div>
+          <p>Pesan</p>
+          <div>
+            <textarea rows="4" name="pesan"></textarea>
+          </div>
+          <button type="submit" class="kirim">Kirim</button>
+          <!-- Link spreedsheet https://docs.google.com/spreadsheets/d/1_NmYkfX1aMvcNL3YFQ8d8HACmpqB9f9Ky4R9nBO0g3w/edit#gid=0 -->
+        </form>
+        <div class="kontak-kanan">
+          <a href="https://www.facebook.com/profile.php?id=100016778503464"><img src="Assets/img/facebook.png" /></a>
+          <a href="https://instagram.com/kiwayway_?r=nametag"><img src="Assets/img/instagram.jpg" /></a>
+          <a href="https://twitter.com/Kyy85014192"><img src="Assets/img/twitter.jpg" /></a>
+          <a href="https://github.com/kutulaut"><img src="Assets/img/github.svg" /></a>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Contact -->
+    <!-- Awal Footer -->
+    <footer>
+      <div class="akhir">© 2022 Copyright | Created by <a href="https://github.com/kutulaut">kutulaut</a></div>
+    </footer>
+    <!-- Akhir Footer -->
+    <script src="Assets/js/script.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbybHORiAdS2pxOJx-VUfrzlp7LKsnEnwtIpFHTtl6xDYv9Rv3cDymt8pbbIimyc5s4_/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const kirim = document.querySelector(".kirim");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan alert
+            alert.style.display = "flex";
+            console.log("Success!", response);
+            // reset form
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+/* biru muda, hijau muda, dan tosca */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: #eaeaea;
+}
+
+/*  awal navbar */
+nav {
+  display: flex;
+  background: RGB(208, 240, 192);
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  font-size: 20px;
+}
+
+nav .logo {
+  font-family: sans-serif;
+  font-size: 28px;
+  color: grey;
+}
+
+nav .logo span {
+  font-size: 25px;
+  color: RGB(64, 224, 208);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: grey;
+  /* text-shadow: 2px 2px 30px grey; */
+}
+
+nav ul li a:hover {
+  color: #87cefa;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Akhir Navbar */
+
+/* Awal Home */
+#home {
+  background: linear-gradient(0deg, rgb(0, 177, 195) 0%, rgb(164, 212, 160) 80%);
+  height: 90vh;
+}
+
+#curve {
+  position: absolute;
+  padding-bottom: 10px;
+  bottom: 0;
+  width: 100%;
+}
+
+#curve path {
+  fill: #eaeaea;
+}
+
+.banner {
+  color: RGB(64, 224, 208);
+  text-align: center;
+  padding-top: 80px;
+}
+
+#circle img {
+  height: 275px;
+  width: 275px;
+  background: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  /* px semakin besar makan semakin melengkung */
+}
+
+.title > .name {
+  font-size: 40px;
+  text-shadow: 2px 2px 20px black;
+}
+
+.title > p {
+  margin-top: 10px;
+  font-size: 25px;
+  color: RGB(64, 224, 208);
+}
+/* Akhir Home */
+
+/* Awal About Me */
+.container h2 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.tabel1 {
+  margin-top: 30px;
+}
+
+.am-kiri img {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottomt: 20px;
+  width: 470px;
+  height: 300px;
+  border-radius: 5%;
+  float: left;
+}
+
+.am-kanan {
+  float: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 42px;
+  margin-bottom: 20px;
+}
+
+/* Akhir About Me */
+
+/* Awal Project */
+.project {
+  margin: 30px 0 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg, rgb(0, 177, 195) 0%, rgb(164, 212, 160) 80%);
+}
+
+.project h4 {
+  text-align: center;
+}
+
+.pc {
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin: 5px 15px;
+  gap: 20px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.card {
+  width: 50%;
+  height: auto;
+  grid-column: span 6;
+  margin: 10px 0;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255);
+  transition: all 0.5s;
+}
+
+.head-card {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.head-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-card {
+  padding: 10px 15px;
+}
+
+.body-card h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 10px;
+}
+
+.body-card .detail {
+  background-color: RGB(208, 240, 192);
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.body-card h3 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+.detail a {
+  text-decoration: none;
+  color: black;
+  padding-top: 7px;
+}
+
+.detail:hover {
+  background-color: RGB(64, 224, 208);
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* responsive */
+@media screen and (min-width: 550px) {
+  .card {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .card {
+    width: 350px;
+    margin: 0 10px;
+  }
+}
+/* Akhir Project */
+
+/* Awal Contact */
+.hubungi h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+form {
+  width: 50%;
+  padding: 25px;
+  margin: 30px;
+  float: right;
+}
+.contact,
+.alert {
+  background-color: RGB(208, 240, 192);
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+button {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  background: #1c87c9;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+button:hover {
+  background: rgb(5, 205, 255);
+}
+.kontak-kanan {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.kontak-kanan img {
+  border-radius: 10px;
+  height: 10%;
+  width: 10%;
+  margin: 30px;
+}
+/* Akhir Contact */
+
+footer {
+  margin-top: 30px;
+  background-color: RGB(208, 240, 192);
+}
+
+footer .akhir {
+  font-size: 20px;
+  text-align: justify;
+  margin-left: 150px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+/* akhir footer */
