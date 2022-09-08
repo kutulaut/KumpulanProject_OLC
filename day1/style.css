@@ -1,0 +1,20 @@
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.heading-biru {
+  color: blue;
+}
+
+.heading-merah {
+  color: red;
+}
+
+button {
+  border-color: aqua;
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
+}
